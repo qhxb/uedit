@@ -1,0 +1,39 @@
+server {
+        listen       80; 
+        server_name  xxxxxxxx;
+        #charset koi8-r;
+        #access_log  logs/host.access.log  main;
+        location  / {
+        return 404; 
+        }location  /recent_scans/ {
+        return 404; 
+        }location  /robots.txt {
+        return 404; 
+        }location  /sitemap.xml {
+        return 404; 
+        }location  /api_docs {
+        return 404; 
+        }location  /static {
+        proxy_pass   http://vvvvvvvvv:8000/static;
+        }location  /static/ {
+        proxy_pass   http://vvvvvvvvv:8000/static/;
+        }location  /Smali/ {
+        proxy_pass   http://vvvvvvvvv:8000/Smali/;
+        }                        location  /search {
+        proxy_pass   http://vvvvvvvvv:8000/search;
+        }                        location  /PDF/ {
+        proxy_pass   http://vvvvvvvvv:8000/PDF/;
+        }                        location  /ManifestView/ {
+        proxy_pass   http://vvvvvvvvv:8000/ManifestView/;
+        }                        location  /Java/ {
+        proxy_pass   http://vvvvvvvvv:8000/Java/;
+        }                        location  /DynamicAnalyzer/ {
+        proxy_pass   http://vvvvvvvvv:8000/DynamicAnalyzer/;
+        }                        location  /StaticAnalyzer/ {
+        proxy_pass   http://vvvvvvvvv:8000/StaticAnalyzer/;
+        }                        location  /ViewSource/ {
+        proxy_pass   http://vvvvvvvvv:8000/ViewSource/;
+        }                        location  /download/ {
+        proxy_pass   http://vvvvvvvvv:8000/download/;
+        }    
+    }
